@@ -8,6 +8,7 @@ import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.jms.Queue;
+import java.util.ArrayList;
 
 @Component
 public class LogProducer implements CommandLineRunner{
@@ -28,6 +29,15 @@ public class LogProducer implements CommandLineRunner{
 
     public void send(String message) {
 
-        this.jmsMessagingTemplate.convertAndSend(logQueue,message);
+        this.jmsMessagingTemplate.convertAndSend(logQueue, message);
+        ArrayList<String> strings = new ArrayList<>();
+        //strings.for
+        for (String string : strings) {
+
+        }
+        //strings.fori
+        for (int i = 0; i < strings.size(); i++) {
+            
+        }
     }
 }
